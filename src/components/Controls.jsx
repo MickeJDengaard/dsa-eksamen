@@ -1,9 +1,11 @@
+//Komponent der håndterer kapactitet, session values og kørsel af knapsack algoritmen
+
 const Controls = ({
-  sessions,
-  capacityHours,
-  onRun,
-  onCapacityChange,
-  onSessionValueChange,
+  sessions, //Liste af sessions
+  capacityHours, //Maks ugentlig kapacitet i timer
+  onRun, //Funktion til at køre knapsack algoritmen
+  onCapacityChange, //Funktion til at ændre kapacitet
+  onSessionValueChange, //Funktion til at ændre session value
 }) => {
   return (
     <div style={{ marginBottom: 20 }}>

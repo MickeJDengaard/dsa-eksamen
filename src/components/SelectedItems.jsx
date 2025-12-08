@@ -1,17 +1,18 @@
-import {} from "react"; // ingen hooks nødvendige hvis useMemo fjernes
+//Farver til visualisering af træningstyper
 const colors = {
-  run: "#FF6B6B",
-  bike: "#4D96FF",
-  swim: "#4DFFB8",
-  strength: "#FFD93D",
+  run: "#f20000ff",
+  bike: "#004ab1ff",
+  swim: "#017f4cff",
+  strength: "#d1a700ff",
 };
 
 const SelectedItems = ({ steps, currentStep }) => {
+  //Udregner de valgte sessions baseret på knapsack-algoritmens traceback steps
   const shown = steps
     ? steps
-        .slice(0, currentStep)
-        .filter((step) => step.kind === "traceback" && step.took)
-        .map((step) => step.session)
+        .slice(0, currentStep) //Kun de steps vi er nået til
+        .filter((step) => step.kind === "traceback" && step.took) //Kun reelle valg i optimeringen
+        .map((step) => step.session) //Ekstract session data
     : [];
   return (
     <div style={{ marginTop: 25 }}>
