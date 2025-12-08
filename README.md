@@ -1,3 +1,7 @@
+Micke Dengaard
+
+
+
 Knapsack Training Planner
 
 Denne applikation visualiserer, hvordan en knapsack algoritme kan bruges til at bygge en optimal træningsuge ud fra:
